@@ -9,7 +9,7 @@ class Accounts(models.Model):
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    username = models.CharField(max_length=150, blank=True) 
+    name = models.CharField(max_length=150, blank=True) 
     body = models.TextField(blank=True)
     image = models.ImageField(
     upload_to='images/', default= "../profile_kqgeo6.jpg"
